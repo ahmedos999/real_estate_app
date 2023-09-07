@@ -42,19 +42,19 @@ class Home extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           'i am looking to',
                           style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.w600),
                         ),
-                        whiteContainer(),
-                        whiteContainer(),
-                        whiteContainer()
+                        whiteContainer('Buy a Property'),
+                        whiteContainer('Sell a Property'),
+                        whiteContainer('Rent a Property')
                       ],
                     ),
                   ),
