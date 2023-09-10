@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/data/model/house_model.dart';
 import 'package:real_estate_app/presentation/components/home_components.dart';
 
 class Home extends StatelessWidget {
@@ -6,6 +7,30 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<house> houses = [
+      house(
+          img: 'assets/imgs/img1.jpg',
+          status: 'buy',
+          duration: '3',
+          name: 'The Shoppers',
+          location: 'Dubai',
+          numOfBed: '5',
+          numOfBath: '3',
+          numOfCars: '3',
+          type: 'house',
+          price: '1.2'),
+      house(
+          img: 'assets/imgs/img2.jpg',
+          status: 'buy',
+          duration: '3',
+          name: 'The New Town',
+          location: 'Ajman',
+          numOfBed: '6',
+          numOfBath: '4',
+          numOfCars: '4',
+          type: 'house',
+          price: '1.6')
+    ];
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -99,13 +124,24 @@ class Home extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                card(context, 'assets/imgs/img1.jpg', 'buy', '3',
-                    'The Shoppers', 'Dubai', '5', '3', '3', 'house', '1.2'),
-                SizedBox(
-                  height: 20,
-                ),
-                card(context, 'assets/imgs/img2.jpg', 'buy', '5',
-                    'The New Town', 'Ajman', '6', '4', '4', 'house', '1.7')
+                ListView.builder(
+                    shrinkWrap: true,
+                    physics: ScrollPhysics(),
+                    itemCount: houses.length,
+                    itemBuilder: (context, index) {
+                      return card(
+                          context,
+                          houses[index].img,
+                          houses[index].status,
+                          houses[index].duration,
+                          houses[index].name,
+                          houses[index].location,
+                          houses[index].numOfBed,
+                          houses[index].numOfBath,
+                          houses[index].numOfCars,
+                          houses[index].type,
+                          houses[index].price);
+                    })
               ],
             ), //The Main column
           ),
