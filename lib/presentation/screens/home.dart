@@ -13,71 +13,99 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
             child: Column(
               children: [
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios,
-                      size: 20,
-                    ),
-                    Text(
-                      'Create post',
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                    ),
-                    SizedBox()
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 9, 82, 142),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Column(
                       children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
                         const Text(
-                          'i am looking to',
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600),
+                          'Current Location',
+                          style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
-                        whiteContainer('Buy a Property'),
-                        whiteContainer('Sell a Property'),
-                        whiteContainer('Rent a Property')
+                        Row(
+                          children: [
+                            Icon(Icons.location_on_outlined,
+                                color: Colors.blue[800]),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Dubai 452529',
+                              style: TextStyle(
+                                  color: Colors.blue[800], fontSize: 16),
+                            ),
+                          ],
+                        )
                       ],
                     ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Top Properties for you',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    Text('See all',
-                        style: TextStyle(fontSize: 16, color: Colors.blue)),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.blue[800]),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Center(
+                            child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        )),
+                      ),
+                    )
                   ],
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                card(context)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: Colors.grey)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.search,
+                              color: Colors.grey,
+                            ),
+                            Text(
+                              'Try Search Properties',
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(child: Icon(Icons.filter_list)),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                seeMoreRow('Recently added', 'See all'),
+                const SizedBox(
+                  height: 20,
+                ),
+                card(context, 'assets/imgs/img1.jpg', 'buy', '3',
+                    'The Shoppers', 'Dubai', '5', '3', '3', 'house', '1.2'),
+                SizedBox(
+                  height: 20,
+                ),
+                card(context, 'assets/imgs/img2.jpg', 'buy', '5',
+                    'The New Town', 'Ajman', '6', '4', '4', 'house', '1.7')
               ],
             ), //The Main column
           ),

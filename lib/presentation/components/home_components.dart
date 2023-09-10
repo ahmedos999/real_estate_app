@@ -23,7 +23,18 @@ Widget whiteContainer(String type) {
   );
 }
 
-Widget card(BuildContext context) {
+Widget card(
+    BuildContext context,
+    String img,
+    String status,
+    String duration,
+    String name,
+    String location,
+    String numOfBed,
+    String numOfBath,
+    String numOfCars,
+    String type,
+    String price) {
   return Column(
     children: [
       Stack(
@@ -36,7 +47,7 @@ Widget card(BuildContext context) {
                     fit: BoxFit.fill,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
-                        child: Image.asset('assets/imgs/img1.jpg')))),
+                        child: Image.asset(img)))),
           ),
           Positioned(
               top: 10,
@@ -45,11 +56,10 @@ Widget card(BuildContext context) {
                 decoration: BoxDecoration(
                     color: Colors.blue[300],
                     borderRadius: BorderRadius.circular(50)),
-                child: const Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Text(
-                    'Buy',
+                    status,
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w600),
                   ),
@@ -62,9 +72,8 @@ Widget card(BuildContext context) {
                 decoration: BoxDecoration(
                     color: Colors.green[500],
                     borderRadius: BorderRadius.circular(50)),
-                child: const Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Row(
                     children: [
                       Icon(
@@ -75,7 +84,7 @@ Widget card(BuildContext context) {
                         width: 5,
                       ),
                       Text(
-                        '0-3 Month',
+                        '0-$duration Month',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       )
@@ -91,10 +100,11 @@ Widget card(BuildContext context) {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Column(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'The Shoppes',
+                name,
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(
@@ -107,8 +117,8 @@ Widget card(BuildContext context) {
                     color: Colors.grey,
                   ),
                   Text(
-                    'Hawaii 81063',
-                    style: TextStyle(color: Colors.grey, fontSize: 14),
+                    location,
+                    style: const TextStyle(color: Colors.grey, fontSize: 14),
                   )
                 ],
               )
@@ -128,7 +138,7 @@ Widget card(BuildContext context) {
       const SizedBox(
         height: 5,
       ),
-      const Row(
+      Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
@@ -145,7 +155,7 @@ Widget card(BuildContext context) {
                       width: 5,
                     ),
                     Text(
-                      '5',
+                      numOfBed,
                       style: TextStyle(color: Colors.grey),
                     )
                   ],
@@ -160,7 +170,7 @@ Widget card(BuildContext context) {
                       width: 5,
                     ),
                     Text(
-                      '3',
+                      numOfBath,
                       style: TextStyle(color: Colors.grey),
                     )
                   ],
@@ -175,7 +185,7 @@ Widget card(BuildContext context) {
                       width: 5,
                     ),
                     Text(
-                      '3',
+                      numOfCars,
                       style: TextStyle(color: Colors.grey),
                     )
                   ],
@@ -191,7 +201,7 @@ Widget card(BuildContext context) {
                     width: 5,
                   ),
                   Text(
-                    'House',
+                    type,
                     style: TextStyle(color: Colors.grey),
                   )
                 ],
@@ -199,11 +209,43 @@ Widget card(BuildContext context) {
             ],
           ),
           Text(
-            r"$2.1M",
+            "\$$price M",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           )
         ],
       ),
+    ],
+  );
+}
+
+Widget seeMoreRow(String leading, String trailling) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Text(
+        leading,
+        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+      ),
+      Text(trailling, style: TextStyle(fontSize: 16, color: Colors.blue)),
+    ],
+  );
+}
+
+Widget titleRow() {
+  return const Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Icon(
+        Icons.arrow_back_ios,
+        size: 20,
+      ),
+      Text(
+        'Details Page',
+        style: TextStyle(
+          fontSize: 22,
+        ),
+      ),
+      SizedBox()
     ],
   );
 }
