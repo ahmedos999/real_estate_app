@@ -8,15 +8,15 @@ Widget whiteContainer(String type) {
       color: Colors.white,
     ),
     child: Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             type,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
           ),
-          Icon(Icons.arrow_forward_ios)
+          const Icon(Icons.arrow_forward_ios)
         ],
       ),
     ),
@@ -29,7 +29,7 @@ Widget card(BuildContext context) {
       Stack(
         children: [
           Positioned(
-            child: Container(
+            child: SizedBox(
                 width: MediaQuery.sizeOf(context).width,
                 height: MediaQuery.sizeOf(context).height * 0.3,
                 child: FittedBox(
@@ -45,9 +45,9 @@ Widget card(BuildContext context) {
                 decoration: BoxDecoration(
                     color: Colors.blue[300],
                     borderRadius: BorderRadius.circular(50)),
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Text(
                     'Buy',
                     style: TextStyle(
@@ -62,9 +62,9 @@ Widget card(BuildContext context) {
                 decoration: BoxDecoration(
                     color: Colors.green[500],
                     borderRadius: BorderRadius.circular(50)),
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Row(
                     children: [
                       Icon(
@@ -85,7 +85,7 @@ Widget card(BuildContext context) {
               )),
         ],
       ),
-      SizedBox(
+      const SizedBox(
         height: 5,
       ),
       Row(

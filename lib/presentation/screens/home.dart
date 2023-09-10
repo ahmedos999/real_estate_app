@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color.fromARGB(255, 9, 82, 142),
+                    color: const Color.fromARGB(255, 9, 82, 142),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
