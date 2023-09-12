@@ -6,11 +6,22 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(children: [
-        card2(context, 'assets/img/img1.jpg', 'status', '3', 'Bujman',
-            'Duabi,aljadaf', '1', '2', '1', 'house', '1.8')
-      ]),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
+            child: Column(children: [
+              titleRow(),
+              SizedBox(
+                height: 10,
+              ),
+              card2(context, 'assets/imgs/img1.jpg', '3', 'Bujman',
+                  'Duabi,aljadaf', '1.8')
+            ]),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget card2(
-    BuildContext context,
-    String img,
-    String status,
-    String duration,
-    String name,
-    String location,
-    String numOfBed,
-    String numOfBath,
-    String numOfCars,
-    String type,
-    String price) {
+Widget card2(BuildContext context, String img, String duration, String name,
+    String location, String price) {
   return Column(
     children: [
       Stack(
@@ -33,11 +23,13 @@ Widget card2(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(50)),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.white),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.ios_share),
+                      child: Icon(
+                        Icons.ios_share,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -45,11 +37,14 @@ Widget card2(
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(50)),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.white),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.favorite),
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.blue,
+                      ),
                     ),
                   ),
                 ],
@@ -62,7 +57,8 @@ Widget card2(
                     color: Colors.green[500],
                     borderRadius: BorderRadius.circular(50)),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Row(
                     children: [
                       const Icon(
@@ -105,37 +101,47 @@ Widget card2(
                     Icons.location_on,
                     color: Colors.grey,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        location,
-                        style:
-                            const TextStyle(color: Colors.grey, fontSize: 14),
-                      ),
-                      Text(
-                        'Budget',
-                        style:
-                            const TextStyle(color: Colors.grey, fontSize: 14),
-                      ),
-                    ],
+                  Text(
+                    location,
+                    style: const TextStyle(color: Colors.grey, fontSize: 14),
                   )
                 ],
               )
             ],
           ),
-          Text(
-            "\$$price M",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Column(
+            children: [
+              Text(
+                "\$$price M",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'Budget',
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
+              ),
+            ],
           )
         ],
       ),
-      const SizedBox(
-        height: 5,
+    ],
+  );
+}
+
+Widget titleRow() {
+  return const Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Icon(
+        Icons.arrow_back_ios,
+        size: 20,
       ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [],
+      Text(
+        'Details Page',
+        style: TextStyle(
+          fontSize: 22,
+        ),
       ),
+      SizedBox()
     ],
   );
 }

@@ -230,22 +230,3 @@ Widget seeMoreRow(String leading, String trailling) {
     ],
   );
 }
-
-Widget titleRow() {
-  return const Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Icon(
-        Icons.arrow_back_ios,
-        size: 20,
-      ),
-      Text(
-        'Details Page',
-        style: TextStyle(
-          fontSize: 22,
-        ),
-      ),
-      SizedBox()
-    ],
-  );
-}
