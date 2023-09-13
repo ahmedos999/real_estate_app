@@ -89,8 +89,8 @@ class Home extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           border: Border.all(color: Colors.grey)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8),
                         child: Row(
                           children: [
                             Icon(
@@ -110,8 +110,8 @@ class Home extends StatelessWidget {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(50)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Center(child: Icon(Icons.filter_list)),
                       ),
                     )
@@ -126,7 +126,7 @@ class Home extends StatelessWidget {
                 ),
                 ListView.builder(
                     shrinkWrap: true,
-                    physics: ScrollPhysics(),
+                    physics: const ScrollPhysics(),
                     itemCount: houses.length,
                     itemBuilder: (context, index) {
                       return card(

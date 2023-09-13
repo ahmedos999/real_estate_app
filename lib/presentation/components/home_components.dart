@@ -57,10 +57,10 @@ Widget card(
                     color: Colors.blue[300],
                     borderRadius: BorderRadius.circular(50)),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Text(
                     status,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -73,19 +73,19 @@ Widget card(
                     color: Colors.green[500],
                     borderRadius: BorderRadius.circular(50)),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.timer_sharp,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Text(
                         '0-$duration Month',
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       )
                     ],
@@ -105,14 +105,14 @@ Widget card(
             children: [
               Text(
                 name,
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.location_on,
                     color: Colors.grey,
                   ),
@@ -144,65 +144,65 @@ Widget card(
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 8.0),
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.bed,
                       color: Colors.grey,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
                       numOfBed,
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     )
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 8.0),
                 child: Row(
                   children: [
-                    Icon(Icons.bathtub, color: Colors.grey),
-                    SizedBox(
+                    const Icon(Icons.bathtub, color: Colors.grey),
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
                       numOfBath,
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     )
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 8.0),
                 child: Row(
                   children: [
-                    Icon(Icons.car_repair, color: Colors.grey),
-                    SizedBox(
+                    const Icon(Icons.car_repair, color: Colors.grey),
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
                       numOfCars,
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     )
                   ],
                 ),
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     '|',
                     style: TextStyle(color: Colors.grey),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Text(
                     type,
-                    style: TextStyle(color: Colors.grey),
+                    style: const TextStyle(color: Colors.grey),
                   )
                 ],
               )
@@ -210,7 +210,7 @@ Widget card(
           ),
           Text(
             "\$$price M",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           )
         ],
       ),
@@ -224,9 +224,9 @@ Widget seeMoreRow(String leading, String trailling) {
     children: [
       Text(
         leading,
-        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
       ),
-      Text(trailling, style: TextStyle(fontSize: 16, color: Colors.blue)),
+      Text(trailling, style: const TextStyle(fontSize: 16, color: Colors.blue)),
     ],
   );
 }

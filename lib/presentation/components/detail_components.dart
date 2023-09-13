@@ -70,7 +70,7 @@ Widget card2(BuildContext context, String img, String duration, String name,
                       ),
                       Text(
                         '0-$duration Month',
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       )
                     ],
@@ -90,14 +90,14 @@ Widget card2(BuildContext context, String img, String duration, String name,
             children: [
               Text(
                 name,
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.location_on,
                     color: Colors.grey,
                   ),
@@ -113,11 +113,11 @@ Widget card2(BuildContext context, String img, String duration, String name,
             children: [
               Text(
                 "\$$price M",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 'Budget',
-                style: const TextStyle(color: Colors.grey, fontSize: 14),
+                style: TextStyle(color: Colors.grey, fontSize: 14),
               ),
             ],
           )

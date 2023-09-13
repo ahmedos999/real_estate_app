@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_app/presentation/screens/details.dart';
-import 'package:real_estate_app/presentation/screens/home.dart';
 
 void main() {
   runApp(const MyApp());

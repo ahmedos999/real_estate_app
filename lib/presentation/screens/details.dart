@@ -13,7 +13,7 @@ class DetailsPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
             child: Column(children: [
               titleRow(),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               card2(context, 'assets/imgs/img1.jpg', '3', 'Bujman',
