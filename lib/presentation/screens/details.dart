@@ -80,8 +80,22 @@ class DetailsPage extends StatelessWidget {
                             ))
                       ]),
                 ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'properties Requirments',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
+                  Text('See all',
+                      style: const TextStyle(fontSize: 16, color: Colors.blue)),
+                ],
               )
-            ]),
+            ]), //main
           ),
         ),
       ),
