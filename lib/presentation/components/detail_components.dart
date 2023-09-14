@@ -113,7 +113,8 @@ Widget card2(BuildContext context, String img, String duration, String name,
             children: [
               Text(
                 "\$$price M",
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const Text(
                 'Budget',
@@ -142,6 +143,49 @@ Widget titleRow() {
         ),
       ),
       SizedBox()
+    ],
+  );
+}
+
+Widget propertiesRow(IconData firstIcon, String number, String lable,
+    IconData secIcon, String secLable) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Row(
+        children: [
+          Icon(
+            firstIcon,
+            color: Colors.grey,
+            size: 25,
+          ),
+          SizedBox(width: 5),
+          Text(
+            number,
+            style: TextStyle(color: Colors.grey, fontSize: 15),
+          ),
+          SizedBox(width: 5),
+          Text(
+            lable,
+            style: TextStyle(color: Colors.grey, fontSize: 15),
+          ),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Icon(
+            secIcon,
+            color: Colors.grey,
+            size: 30,
+          ),
+          SizedBox(width: 5),
+          Text(
+            secLable,
+            style: TextStyle(color: Colors.grey, fontSize: 15),
+          ),
+        ],
+      )
     ],
   );
 }

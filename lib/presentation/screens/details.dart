@@ -23,15 +23,17 @@ class DetailsPage extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue, width: 2),
+                    border: Border.all(
+                      color: Colors.blue,
+                    ),
                     borderRadius: BorderRadius.circular(20)),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         CircleAvatar(
-                          radius: 40,
+                          radius: 35,
                           backgroundImage: AssetImage('assets/imgs/pp.jpg'),
                         ),
                         Column(
@@ -40,7 +42,7 @@ class DetailsPage extends StatelessWidget {
                             Text(
                               'Alison burger',
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w600),
+                                  fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                             SizedBox(
                               height: 5,
@@ -48,7 +50,7 @@ class DetailsPage extends StatelessWidget {
                             Text(
                               'Buyer',
                               style:
-                                  TextStyle(color: Colors.grey, fontSize: 16),
+                                  TextStyle(color: Colors.grey, fontSize: 15),
                             ),
                           ],
                         ),
@@ -63,7 +65,7 @@ class DetailsPage extends StatelessWidget {
                                   Icon(
                                     Icons.chat,
                                     color: Colors.white,
-                                    size: 22,
+                                    size: 20,
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -72,7 +74,7 @@ class DetailsPage extends StatelessWidget {
                                     'Chat',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20,
+                                      fontSize: 18,
                                     ),
                                   )
                                 ],
@@ -94,6 +96,46 @@ class DetailsPage extends StatelessWidget {
                   Text('See all',
                       style: const TextStyle(fontSize: 16, color: Colors.blue)),
                 ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              propertiesRow(
+                  Icons.bed, '4', 'Bedrooms', Icons.pool, 'Swimming pool'),
+              SizedBox(
+                height: 10,
+              ),
+              propertiesRow(Icons.bathroom, '2', 'bathroom',
+                  Icons.local_parking, 'Local Parking'),
+              SizedBox(
+                height: 10,
+              ),
+              propertiesRow(Icons.car_repair, '1', 'Car Space',
+                  Icons.sports_tennis, 'Tennis Court'),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.amber[200]),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Buyer note',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                            'i want a house with a big backyard so the kids and my pets have plenty of space to play')
+                      ]),
+                ),
               )
             ]), //main
           ),
